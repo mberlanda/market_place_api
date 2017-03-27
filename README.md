@@ -1,6 +1,6 @@
 # Market Place API
 
-This application is created following the instructions of [Api On Rails](http://apionrails.icalialabs.com/book/frontmatter).
+This application is created following the instructions of [Api On Rails](http://apionrails.icalialabs.com/book/frontmatter) by Abraham Kuri Vargas.
 
 
 ### ch01 Introduction
@@ -83,3 +83,5 @@ $ mv spec/controllers/sessions_controller_spec.rb spec/controllers/api/v1
 ```
 rails g model Product title:string price:decimal published:boolean user_id:integer:index
 ```
+
+The products endpoint is not adding the `products:` key in the index response as expected by the test 
