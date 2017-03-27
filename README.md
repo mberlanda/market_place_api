@@ -40,3 +40,13 @@ rails g controller users
 mkdir -p spec/controllers/api/v1
 mv spec/controllers/users_controller_spec.rb spec/controllers/api/v1
 ```
+
+```
+$ rails c
+User.create({email: "example@marketplace.com",
+                          password: "12345678",
+                          password_confirmation: "12345678"})
+$ curl -H 'Accept: application/vnd.marketplace.v1' \
+            http://api.market_place_api.dev/users/1
+{"id":1,"email":"example@marketplace.com","created_at":"2017-03-27T13:25:05.991Z","updated_at":"2017-03-27T13:25:05.991Z"}
+```
