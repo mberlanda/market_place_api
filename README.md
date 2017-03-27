@@ -50,6 +50,8 @@ $ curl -H 'Accept: application/vnd.marketplace.v1' \
             http://api.market_place_api.dev/users/1
 {"id":1,"email":"example@marketplace.com","created_at":"2017-03-27T13:25:05.991Z","updated_at":"2017-03-27T13:25:05.991Z"}
 ```
+Unable to install `gem 'sabisu-rails'`. Created an issue for compatibility issue with Rails 5.
+
 
 ### ch04 Refactoring Tests
 
