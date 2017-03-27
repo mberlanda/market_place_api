@@ -67,3 +67,9 @@ $ curl -H 'Accept: application/vnd.marketplace.v1' \
     end while self.class.exists?(auth_token: auth_token)
   end
 ```
+
+```
+rails g controller sessions
+$ mv app/controllers/sessions_controller.rb app/controllers/api/v1
+$ mv spec/controllers/sessions_controller_spec.rb spec/controllers/api/v1
+```
