@@ -3,7 +3,7 @@
 This application is created following the instructions of [Api On Rails](http://apionrails.icalialabs.com/book/frontmatter).
 
 
-### Introduction
+### ch01 Introduction
 
 ```
 $ rails new market_place_api -T -d=postgresql
@@ -15,3 +15,11 @@ $ ./bin/prax install
 $ cd ~/workspace/market_place_api
 $ prax link
 # prax start in .profile
+```
+
+### ch02 The API
+
+```
+# rails c
+Mime::SET.collect(&:to_s)
+```
