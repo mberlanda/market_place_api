@@ -26,3 +26,13 @@ rails g rspec:install
 ```
 
 Gems that handles api verioning: [https://github.com/bploetz/versionist](https://github.com/bploetz/versionist)
+
+
+### ch03 Presenting the users
+
+```
+gem 'devise'
+rails g devise:install
+rails g devise User
+rake db:migrate
+```
