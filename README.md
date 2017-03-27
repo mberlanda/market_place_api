@@ -50,3 +50,20 @@ $ curl -H 'Accept: application/vnd.marketplace.v1' \
             http://api.market_place_api.dev/users/1
 {"id":1,"email":"example@marketplace.com","created_at":"2017-03-27T13:25:05.991Z","updated_at":"2017-03-27T13:25:05.991Z"}
 ```
+
+### ch04 Refactoring Tests
+
+### ch05 Authentication Users
+
+```
+# app/models/user.rb
+
+  validates :auth_token, uniqueness: true
+  before_create :generate_authentication_token!
+
+  def generate_authentication_token!
+    begin
+      self.auth_token = Devise.friendly_token
+    end while self.class.exists?(auth_token: auth_token)
+  end
+```
