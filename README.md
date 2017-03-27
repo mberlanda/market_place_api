@@ -53,6 +53,8 @@ $ curl -H 'Accept: application/vnd.marketplace.v1' \
 
 ### ch04 Refactoring Tests
 
+Created files under the directory `/spec/support/`
+
 ### ch05 Authentication Users
 
 ```
@@ -72,4 +74,10 @@ $ curl -H 'Accept: application/vnd.marketplace.v1' \
 rails g controller sessions
 $ mv app/controllers/sessions_controller.rb app/controllers/api/v1
 $ mv spec/controllers/sessions_controller_spec.rb spec/controllers/api/v1
+```
+
+### ch06 User products
+
+```
+rails g model Product title:string price:decimal published:boolean user_id:integer:index
 ```
