@@ -35,4 +35,8 @@ gem 'devise'
 rails g devise:install
 rails g devise User
 rake db:migrate
+
+rails g controller users
+mkdir -p spec/controllers/api/v1
+mv spec/controllers/users_controller_spec.rb spec/controllers/api/v1
 ```
