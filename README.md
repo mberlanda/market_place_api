@@ -22,4 +22,7 @@ $ prax link
 ```
 # rails c
 Mime::SET.collect(&:to_s)
+rails g rspec:install
 ```
+
+Gems that handles api verioning: [https://github.com/bploetz/versionist](https://github.com/bploetz/versionist)
