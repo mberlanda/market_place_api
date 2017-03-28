@@ -18,4 +18,7 @@ class Product < ApplicationRecord
 
     products
   end
+
+  has_many :placements
+  has_many :orders, through: :placements
 end

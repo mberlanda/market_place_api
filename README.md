@@ -95,3 +95,9 @@ Generate factory in development: `20.times { FactoryGirl.create :product }`
 ```
 rails g serializer user
 ```
+
+### ch08 Placing Orders
+```
+rails generate model order user:references total:decimal
+rails generate model placement order:references product:references
+```
