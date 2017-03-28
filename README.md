@@ -100,4 +100,6 @@ rails g serializer user
 ```
 rails generate model order user:references total:decimal
 rails generate model placement order:references product:references
+rails g controller api/v1/orders
+rails g serializer order
 ```
