@@ -6,6 +6,7 @@ class User < ApplicationRecord
   before_validation :generate_authentication_token!, on: :create
   validates :auth_token, uniqueness: true
   has_many :products, dependent: :destroy
+  has_many :orders, dependent: :destroy
 
   def generate_authentication_token!
     self.auth_token = loop do
