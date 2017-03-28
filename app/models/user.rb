@@ -3,14 +3,15 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+  before_validation :generate_authentication_token!, on: :create
   validates :auth_token, uniqueness: true
-  before_create :generate_authentication_token!
   has_many :products, dependent: :destroy
 
   def generate_authentication_token!
-    begin
-      self.auth_token = Devise.friendly_token
-    end while self.class.exists?(auth_token: auth_token)
+    self.auth_token = loop do
+      token = Devise.friendly_token
+      break token unless User.exists?(auth_token: token)
+    end
   end
 
 end

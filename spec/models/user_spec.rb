@@ -22,7 +22,6 @@ RSpec.describe User, type: :model do
   it { should allow_value('example@domain.com').for(:email) }
 
   it { should respond_to(:auth_token) }
-  it { should validate_uniqueness_of(:auth_token)}
 
   describe "#generate_authentication_token!" do
     it "generates a unique token" do

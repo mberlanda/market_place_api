@@ -29,20 +29,20 @@ gem 'devise'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platform: :mri
-end
-
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
 
-group :test do
-  gem 'rspec-rails', '~> 3.5'
+group :development, :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug', platform: :mri
   gem 'factory_girl_rails'
   gem 'ffaker'
+end
+
+group :test do
+  gem 'rspec-rails', '~> 3.5'
   gem 'shoulda-matchers'
 end
 

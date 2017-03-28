@@ -85,3 +85,7 @@ rails g model Product title:string price:decimal published:boolean user_id:integ
 ```
 
 The products endpoint is not adding the `products:` key in the index response as expected by the test 
+
+`before_create` trigger in called after validation in Rails 5. I had to use `  before_validation :generate_authentication_token!, on: :create` instead.
+
+Generate factory in development: `20.times { FactoryGirl.create :product }`
