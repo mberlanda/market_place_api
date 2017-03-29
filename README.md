@@ -125,3 +125,12 @@ end
 touch app/views/order_mailer/send_confirmation.html.erb
 touch app/views/order_mailer/send_confirmation.txt.erb
 ```
+
+### ch09 Improving Orders
+
+Create a custom validator:
+
+```
+mkdir app/validators
+touch app/validators/enough_products_validator.rb
+```
