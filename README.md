@@ -134,3 +134,22 @@ Create a custom validator:
 mkdir app/validators
 touch app/validators/enough_products_validator.rb
 ```
+```rb
+# app/validators/enough_products_validator.rb
+class EnoughProductsValidator < ActiveModel::Validator
+  def validate(record)
+    record.placements.each do |placement|
+      product = placement.product
+      if placement.quantity > product.quantity
+        record.errors["#{product.title}"] << "Is out of stock, just #{product.quantity} left"
+      end
+    end
+  end
+end
+# app/models/order.rb
+class Order < ApplicationRecord
+  # ...
+  validates_with EnoughProductsValidator
+  # ...
+end
+```
