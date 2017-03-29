@@ -103,3 +103,25 @@ rails generate model placement order:references product:references
 rails g controller api/v1/orders
 rails g serializer order
 ```
+Send Custom Emails:
+
+```
+rails g mailer order_mailer
+```
+```rb
+# Gemfile
+gem "email_spec"
+# spec/spec_helper.rb
+require "email_spec"
+.
+RSpec.configure do |config|
+.
+config.include(EmailSpec::Helpers)
+config.include(EmailSpec::Matchers)
+.
+end
+```
+```
+touch app/views/order_mailer/send_confirmation.html.erb
+touch app/views/order_mailer/send_confirmation.txt.erb
+```
