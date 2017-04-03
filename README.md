@@ -84,7 +84,7 @@ $ mv spec/controllers/sessions_controller_spec.rb spec/controllers/api/v1
 rails g model Product title:string price:decimal published:boolean user_id:integer:index
 ```
 
-The products endpoint is not adding the `products:` key in the index response as expected by the test 
+The products endpoint is not adding the `products:` key in the index response as expected by the test
 
 `before_create` trigger in called after validation in Rails 5. I had to use `  before_validation :generate_authentication_token!, on: :create` instead.
 
@@ -153,3 +153,7 @@ class Order < ApplicationRecord
   # ...
 end
 ```
+
+### ch10 Optimization
+
+For pagination we can use gems such as `will_paginate` or `kaminari`.
