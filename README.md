@@ -167,3 +167,5 @@ $ bundle install
 $ rails generate delayed_job:active_record
 $ rake db:migrate
 ```
+
+For **Api Caching** the tutorial uses the `cached` options of ActiveModelSerializer. This implementation seems to be [bogus in terms of performance](https://github.com/rails-api/active_model_serializers/blob/master/docs/general/caching.md). The syntax as well has changed since the book publication.
