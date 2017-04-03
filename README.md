@@ -156,4 +156,14 @@ end
 
 ### ch10 Optimization
 
-For pagination we can use gems such as `will_paginate` or `kaminari`.
+For **pagination** we can use gems such as `will_paginate` or `kaminari`.
+
+For **background jobs** we can use gems such as `sidekiq`, 'resque' or `delayed_job`.
+
+```
+# Gemfile
+gem 'delayed_job_active_record'
+$ bundle install
+$ rails generate delayed_job:active_record
+$ rake db:migrate
+```

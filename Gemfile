@@ -30,6 +30,7 @@ gem 'devise'
 # gem 'capistrano-rails', group: :development
 
 gem 'kaminari' # adding pagination
+gem 'delayed_job_active_record' # background jobs
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
